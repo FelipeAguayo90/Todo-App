@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <div>
-        <nav>
+<!-- User must be able to create multiple lists of tasks.
+    User must be able to edit, delete, and mark tasks.
+    User must be able to clear tasks when they are complete.
+    User must be able to view all tasks in a list.
+    User must be able to search for specific tasks in the list.
+    User must be able to save tasks for later viewing.
+    User must be able to mark tasks as completed.
+    User must be able to delete tasks from list.
+    User must be able to customize task list view.
+    App must be intuitive and easy to use. -->
 
+<body class="bg-dark">
+    <div class="outer border border-light">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="p-2 navbar-brand" href="#">Todo</a>
+            <div>
+                <i class="bi bi-gear-fill"></i>
+                <i class="mx-3 bi bi-person-circle"></i>
+            </div>
         </nav>
-        <div>
-            <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="bg-light px-0 col-4">
+                    <div class="d-flex">
+                        <input class="mx-0 my-2" type="text" placeholder="Enter List Name...">
+                        <input class="my-2" type="submit" name="newItem" id="addListItem" value="Add">
+                    </div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action no-border bg-light myActive">
+                            Cras justo odio
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action no-border bg-light">Dapibus ac
+                            facilisis in</a>
+                        <a href="#" class="list-group-item list-group-item-action no-border bg-light">Morbi leo
+                            risus</a>
+                        <a href="#" class="list-group-item list-group-item-action no-border bg-light myActive">Porta ac
+                            consectetur ac</a>
+
+                    </div>
+                </div>
+                <div class="listItem bg-white col-8">
+                    <h1 class="my-2">Test</h1>
+                    <div class="d-flex">
+                        <input class="mx-0 my-2" type="text" placeholder="Enter List Name...">
+                        <input class="my-2" type="submit" name="newItem" id="addListItem" value="Add">
+                    </div>
+                    <div class="p-3 d-flex border myActive">
+                        <input class="check-box" type="checkbox">
+                        <p class="px-2 my-0">some task hiooiupip oiuj</p>
+                    </div>
+                    <div class="p-3 d-flex border myActive">
+                        <input class="check-box" type="checkbox">
+                        <p class="px-2 my-0">some task hiooiupip oiuj</p>
+                    </div>
+                    <div class="p-3 d-flex justify-content-between border myActive">
+                        <div class="d-flex">
+                            <input class="check-box" type="checkbox">
+                            <p class="px-2 my-0">some task hiooiupip oiuj</p>
+                        </div>
+                        <i class="bi bi-trash3-fill deleteTask"></i>
+                    </div>
+
+                    <!-- <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action myActive">
+                          Cras justo odio
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                      </div> -->
+                </div>
 
             </div>
-            <div>
-                
-            </div>
+            <nav class="navbar navbar-dark bg-dark bottomNav d-flex flex-row-reverse">
+                <i class="p-2 bi bi-trash3-fill"></i>
+            </nav>
         </div>
     </div>
 </body>
+
 </html>
